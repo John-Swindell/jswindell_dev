@@ -52,7 +52,7 @@ Menus:
 # --- Theme Parameters (Main Content Configuration) ---
 params:
   title: "John Swindell"
-  description: "Technical Lead @ Tekly Studio |  CS Student @ SNHU | Data & AI focused engineer specializing in scalable ETL architectures and automated cloud infrastructure."
+  description: "Technical Lead @ Tekly Studio |  CS Grad | Data & AI focused engineer specializing in scalable ETL architectures and automated cloud infrastructure."
   favicon: "/fav.png"
   useBootstrapCDN: false
   # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
@@ -90,13 +90,13 @@ params:
     enable: true
     intro: "Hi  , my name is"
     title: "John Swindell."
-    subtitle: "Technical Lead | CS Student"
-    content: "Computer Science candidate architecting scalable data pipelines and automation systems. I translate complex requirements into production-grade infrastructure, with a focus on advancing in AI, ETL, and Cloud Architecture."
+    subtitle: "Technical Lead | Recent CS Grad"
+    content: "I am a Technical Lead, actively architecting scalable data pipelines and automation systems. I translate complex requirements into production-grade infrastructure, with a focus on advancing in AI, ETL, and Cloud Architecture."
     image: "/images/hero.png"
     bottomImage:
       enable: true
     button:
-      enable: true
+      enable: false
       name: "Download Resume"
       url: "/Johnathan Swindell Resume.pdf"
       download: true
@@ -300,7 +300,6 @@ params:
         content: "Real-time inventory tracker built on a non-blocking asyncio architecture. Features a custom offline testing harness for safe DOM parsing and maintains a persistent WebSocket connection for zero-latency alerts."
         image: "/images/projects/discord_bot_image_project.png"
         featured:
-          name: "Read About This Project"
           name: "Read About This Project"
           link: "/blogs/comic-scraper-bot"
         badges:

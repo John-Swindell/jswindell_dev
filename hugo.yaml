@@ -90,7 +90,7 @@ params:
     enable: true
     intro: "Hi  , my name is"
     title: "John Swindell."
-    subtitle: "Technical Lead | Recent CS Grad"
+    subtitle: "Technical Lead | CS Grad"
     content: "I am a Technical Lead, actively architecting scalable data pipelines and automation systems. I translate complex requirements into production-grade infrastructure, with a focus on advancing in AI, ETL, and Cloud Architecture."
     image: "/images/hero.png"
     bottomImage:

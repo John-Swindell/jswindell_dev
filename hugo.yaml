@@ -20,9 +20,9 @@ enableRobotsTXT: true
   # --- Optional Services ---
   #services:
   #googleAnalytics:
-#id: G-MEASUREMENT_ID
-#disqus:
-#shortname: your-disqus-shortname
+  #id: G-MEASUREMENT_ID
+  #disqus:
+  #shortname: your-disqus-shortname
 
 # --- Pagination for Lists ---
 pagination:
@@ -52,7 +52,7 @@ Menus:
 # --- Theme Parameters (Main Content Configuration) ---
 params:
   title: "John Swindell"
-  description: "Technical Lead @ Tekly Studio |  CS Grad | Data & AI focused engineer specializing in scalable ETL architectures and automated cloud infrastructure."
+  description: "Founder of Ellide and Technical Lead at Tekly Studio. I build AI tooling, LLM workflows, data pipelines, and automation-heavy cloud systems."
   favicon: "/fav.png"
   useBootstrapCDN: false
   # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
@@ -90,8 +90,8 @@ params:
     enable: true
     intro: "Hi  , my name is"
     title: "John Swindell."
-    subtitle: "Technical Lead | CS Grad"
-    content: "I am a Technical Lead, actively architecting scalable data pipelines and automation systems. I translate complex requirements into production-grade infrastructure, with a focus on advancing in AI, ETL, and Cloud Architecture."
+    subtitle: "Technical Lead | Founder | AI Platform Engineer"
+    content: "I build and deploy AI tooling where product, data, and infrastructure meet. At Tekly Studio, I own product delivery, CI/CD guardrails, and AI-assisted workflows across a mixed BS/MS engineering cohort. I also founded Ellide to turn messy course documents into AI-ready teaching materials."
     image: "/images/hero.png"
     bottomImage:
       enable: true
@@ -107,6 +107,8 @@ params:
           url: "https://www.linkedin.com/in/john-swindell/"
         - icon: fab fa-github
           url: "https://github.com/John-Swindell/"
+        - icon: fas fa-globe
+          url: "https://ellide.co/"
         # - icon: fab fa-x-twitter
         #   url: "https://twitter.com/your_handle"
         #customIcons:
@@ -115,74 +117,79 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png" # Make sure this exists in static/images/
+    image: "/images/me.png" 
     content: |-
-      I’m a Technical Lead and Senior CS student who loves building scalable architecture from the ground up. I focus on systems that handle complexity, whether that's processing 250k+ daily crypto records or automating onboarding for a 30-person engineering cohort.
-      
-      Currently, I lead infrastructure at Tekly Studio, managing the GCP and Python ETL pipelines behind our quantitative research. I believe in a fail-fast approach and that good architecture is what separates a script from a system. I operate on Agile principles and am currently diving deeper into DevSecOps.
+      I am an early-career engineer and founder focused on applied AI systems: document-to-context pipelines, LLM-ready workflows, data infrastructure, and automation that lets non-specialist users operate complex systems without living inside the implementation details.
+
+      My current work spans Technical Lead work at Tekly Studio, where I own Crypt0nest.io product delivery and set engineering standards for a 44-person mixed BS/MS intern and contributor cohort, plus founder-led product ownership at Ellide, where I am building an educator-first AI study-material platform. The common thread is the same: build useful systems, make the workflow reliable, and keep AI output grounded in the source material or operational reality it came from.
+
+      I am also deepening my Go and Kubernetes fundamentals while preparing for the Certified Kubernetes Administrator exam.
     skills:
       enable: true
       title: "Core Technologies:"
       items:
-        - "Python (Pandas, NumPy, Google API)"
-        - "Google Cloud Platform (GCS, Cloud Run)"
-        - "Docker & Containerization"
-        - "Machine Learning (CatBoost, Scikit-Learn)"
-        - "Git & GitHub"
-        - "SQL / NoSQL / TiDB"
-        - "CI/CD & GitHub Actions"
-        - "Technical Writing & Documentation"
-        - "MS365 Office Suite"
-        - "Adobe Creative Suite"
+        - "AI Product Engineering"
+        - "LLM Workflows"
+        - "Python, Go, JavaScript, SQL, NoSQL"
+        - "OpenAI & Gemini API Integration"
+        - "Google Cloud Platform: Cloud Run, GCS"
+        - "Terraform, Docker, GitHub Actions"
+        - "MLOps / LLMOps / AI Tooling"
+        - "Linux, Bash, Self-Hosting"
+        - "Data Pipelines, Validation Gates, Caching"
+        - "Technical Writing & Product Documentation"
 
 
   experience:
     enable: true
     title: "Professional Experience"
     items:
-      - job: "Technical Lead"
+      - job: "Technical Lead (Contract)"
         company: "Tekly Studio"
+        tabLabel: "Tekly Studio Lead"
+        companyUrl: "https://tekly.dev/"
         date: "Dec 2025 - Present"
         content: |
-          Selected to lead the Spring '26 engineering cohort and oversee critical data infrastructure following a successful tenure at Crypt0nest (a Tekly Studio partner).
-          - Architected a Zero-Touch Onboarding Pipeline: Designed and deployed an event-driven automation system using Python, Airtable, DocuSign, and GitHub Actions. The system handles the entire lifecycle for 30+ engineers, from contract generation to infrastructure provisioning, reducing administrative overhead by 90%.
-          - Headless LMS Implementation: Engineered a custom Learning Management System using the Google Drive and Docs APIs to dynamically generate curriculum materials and enforce role-based access control (RBAC) based on intern tracks.
-          - Infrastructure Leadership: Managing the maintenance and scaling of the core ETL pipeline, ensuring high availability for downstream quantitative research teams.
-          - Cloud Architecture: Overseeing GCP resource allocation and Docker container orchestration while maintaining comprehensive architectural documentation for executive stakeholders.
+          Hired by the CEO as Technical Lead to own technical delivery for Crypt0nest.io products and set engineering standards for a 44-person mixed BS/MS intern and contributor cohort, majority MS-level.
+          - AI-Driven Onboarding Platform: Built a production-critical onboarding system on Google Cloud Run that connects Airtable, Google Workspace, DocuSign, email workflows, and Gemini-generated LMS curricula.
+          - CI/CD and Engineering Governance: Architected GitHub Actions workflows, RBAC controls, review gates, and branching standards so contributors can ship through auditable delivery paths.
+          - AI Enablement: Built internal OpenAI/Gemini tooling, including context-aware support workflows and documentation-grounded training content for new contributors.
+          - Product Delivery: Own product execution for Crypt0nest.io workstreams while translating ambiguous founder/operator requirements into maintainable software and clear technical documentation.
 
-      - job: "Data Engineering Lead Intern"
+      - job: "Founder"
+        company: "Ellide"
+        tabLabel: "Ellide Founder"
+        companyUrl: "https://ellide.co/"
+        date: "May 2026 - Present"
+        content: |
+          Founded Ellide, an AI study-material platform that turns syllabi, slides, scanned readings, and handouts into AI-ready teaching documents grounded in the actual course material.
+          - Product Ownership: Designed the public educator workflow, student experience, developer positioning, and privacy-first product narrative for a closed-source AI document platform.
+          - LLM-Ready Documents: Built the product around a practical problem in AI adoption: messy PDFs and raw uploads often produce generic answers, while structured Markdown, JSON, and teaching guidance give LLMs cleaner context.
+          - Educator-First AI: Focused the product on guided learning, source references, Socratic tutoring behavior, and instructor-defined teaching posture instead of generic answer dumping.
+          - Developer Surface: Published a developer-facing workflow at dev.ellide.co for OCR-heavy documents, structured Markdown/JSON output, and downstream use in AI chats, internal tools, and RAG pipelines.
+
+      - job: "MLOps & Data Engineer Intern"
         company: "Crypt0nest.io"
-        date: "Jun 2024 - Sept 2025"
+        tabLabel: "Tekly Internship"
+        companyUrl: "https://crypt0nest.io/"
+        date: "Jun 2025 - Sep 2025"
         content: |
-          Spearheaded the development of a survivorship-bias-free data pipeline for a Tekly Studio partner to support quantitative trading research.
-          - ETL Architecture: Designed and implemented a scalable ETL framework that ingests, cleans, and transforms raw multi-source data (CoinGecko, DeFiLlama) into optimized Parquet datasets.
-          - Cost Optimization: Engineered a two-tier caching strategy that reduced external API load by 90% while significantly increasing data throughput and availability.
-          - Data Quality: Architected a Silver Layer validation framework to enforce schema integrity and data quality across 250k+ daily records.
-          - Robust Ingestion: Developed resilient Python parsers to handle complex, nested JSON schemas and rate-limited API endpoints.
+          Built data infrastructure and model-validation tooling for quantitative crypto research, with proprietary strategy details removed from the public case studies.
+          - GCP Data Pipeline: Architected a Dockerized ETL pipeline that ingested CoinGecko, DeFi Llama, and LunarCrush data into GCS-backed datasets for model training.
+          - Caching and Cost Control: Implemented a two-tier local/GCS cache that reduced repeated data refreshes from hours to minutes and cut external API dependency by roughly 90%.
+          - Model Validation: Added SHAP diagnostics, walk-forward validation, and ingestion checks that blocked 6,000+ data integrity errors before downstream models consumed polluted records.
+          - Point-in-Time Architecture: Designed pipeline logic to reduce survivorship and lookahead bias in historical training data.
 
-      - job: "Google Search Quality Rater"
-        company: "RWS Group Ltd."
-        date: "October 2023 - January 2024"
-        content: |
-          - Worked on training and optimizing search algorithms on evolving search patterns and user behavior trends.
-          - Maintained and ensured high levels of accuracy and consistency in evaluating search engine algorithm outputs.
-          - Provided insights to improve search engine optimization strategies, content quality, and overall user experience.
-
-      - job: "Senior Server Administrator"
+      - job: "Server Administrator"
         company: "Repulsion Ltd."
+        tabLabel: "Repulsion Ltd."
+        companyUrl: "https://www.repulsion.co.uk/"
         date: "October 2021 - October 2023"
         content: |
-          - Promoted to Senior Server Administrator in the first year for demonstrating technical expertise and leadership.
-          - Managed and optimized 16 servers across multiple regions, improving performance and reducing downtime.
-          - Utilized Linux and Pterodactyl to maintain server infrastructure, troubleshooting issues and optimizing code.
-          - Acted as a key liaison for customer issues, ensuring satisfaction through problem resolution and communication.
-      - job: "Server Administrator"
-        company: "Rustynation LLC."
-        date: "August 2020 - October 2021"
-        content: |
-          - Developed and maintained server infrastructure, including player data analysis using Arkan and Battlemetrics.
-          - Conducted quality assurance tests on server performance and user interactions, identifying and resolving issues.
-          - Composed public announcements and events for community engagement via Discord and website updates.
+          Supported 16 Linux-based, Pterodactyl-managed game server environments during U.S. off-hours.
+          - Linux Operations: Used Bash and panel-based tooling to troubleshoot plugin failures, restarts, configuration issues, and player-facing incidents.
+          - Support and Escalation: Coordinated with developers and translated technical constraints for nontechnical users during production issues.
+          - Systems Foundation: Built practical instincts around service uptime, logs, configuration drift, and the human cost of unclear operational processes.
 
   education:
     enable: true
@@ -193,7 +200,7 @@ params:
         school:
           name: "Southern New Hampshire University"
           url: "https://www.snhu.edu/"
-        date: "Expected: May 2026"
+        date: "April 2026"
         GPA: "3.97 / 4.0"
         content: |-
           - SNHU President's List: 2024 - 2026
@@ -207,8 +214,16 @@ params:
 
   achievements:
     enable: true
-    title: "Leadership, Contributions & Honors"
+    title: "Product, Leadership & Honors"
     items:
+      - title: "Founder - Ellide"
+        content: "Launched Ellide.co, an educator-first AI study-material platform that turns syllabi, slides, scanned readings, and handouts into AI-ready teaching materials grounded in the actual course context."
+        url: "https://ellide.co/"
+
+      - title: "Technical Lead - Tekly Studio"
+        content: "Hired by the CEO as Technical Lead to own Crypt0nest.io product delivery and set engineering standards, code review paths, and CI/CD guardrails for a 44-person mixed BS/MS intern and contributor cohort."
+        url: "https://tekly.dev/"
+
       - title: "Key Contributor & Developer - Coding United Club @ SNHU"
         content: "Spearheaded a major revitalization of the club's GitHub presence. Architected and documented core resources including developer templates (Python, Docker), a centralized Club Hub, and an interactive CS Career Skill Explorer. These initiatives significantly improved member onboarding and resource accessibility."
         url: "https://github.com/codingUnited"
@@ -226,9 +241,33 @@ params:
     enable: true
     # title: "My Projects"
     items:
+      # --- Founder / AI Product Project ---
+      - title: "Ellide - AI Study Materials for Educators"
+        content: "Founded and launched Ellide.co, an educator-first AI workflow that turns syllabi, slides, readings, handouts, and OCR-heavy PDFs into AI-ready teaching documents. The product is built around grounded context, optional teaching guidance, and cleaner Markdown/JSON outputs for ChatGPT, Claude, Gemini, internal tools, and RAG-style workflows."
+        image: "/images/projects/ellide-homepage.png"
+        imageDark: "/images/projects/ellide-homepage-dark.png"
+        featured:
+          name: "Visit Ellide"
+          link: "https://ellide.co/"
+        badges:
+          - "Founder"
+          - "AI Product"
+          - "LLMOps"
+          - "OCR"
+          - "Document AI"
+          - "RAG Context"
+          - "Education Technology"
+        links:
+          - icon: fas fa-globe
+            url: "https://ellide.co/"
+            tooltip: "Educator Site"
+          - icon: fas fa-code
+            url: "https://dev.ellide.co/"
+            tooltip: "Developer Workflow"
+
       # --- Platform Engineering Project ---
       - title: "Automated Onboarding Pipeline & Headless LMS"
-        content: "Architected a zero-touch hiring pipeline using Python micro-services to scale an internship cohort of 30+ engineers. The system orchestrates Airtable, DocuSign, and GitHub Actions to automate the entire lifecycle, from contract generation and signature verification to infrastructure provisioning, reducing administrative overhead by 90%."
+        content: "Built a production-critical onboarding platform on Google Cloud Run for Tekly Studio. The system orchestrates Airtable, DocuSign, Google Workspace, email flows, Gemini-generated LMS curricula, Terraform-managed deployment, and GitHub Actions automation so a mixed BS/MS contributor cohort can onboard without fragile manual handoffs."
         image: "/images/projects/automated-onboarding-base-final.png"
         featured:
           name: "Read Architecture Breakdown"
@@ -239,7 +278,9 @@ params:
           - "Platform Engineering"
           - "DocuSign API"
           - "Airtable API"
-          - "OpenAI API"
+          - "Gemini API"
+          - "Terraform"
+          - "Cloud Run"
         links:
           - icon: fab fa-github
             url: "https://github.com/John-Swindell/automated-onboarding-pipeline"
@@ -247,7 +288,7 @@ params:
 
       # --- Machine Learning Project ---
       - title: "ML-Driven Quant Research Model"
-        content: "A backtesting framework utilizing CatBoost and Anchored Walk-Forward Validation. Engineered to detect overfitting and validate potential alpha quickly via rigorous risk diagnostics (Sharpe, Sortino, Volatility Targeting)"
+        content: "A model-validation framework using CatBoost, SHAP diagnostics, QuantStats, and walk-forward validation to test momentum strategies without leaking future data. Built to identify overfitting, regime sensitivity, and risk-adjusted performance issues before a strategy reaches production research workflows."
         image: "/images/projects/quant_tearsheet_thumb.png"
         featured:
           name: "Read Case Study"
@@ -265,7 +306,7 @@ params:
 
        # --- Data Engineering Crypt0nest Project ---
       - title: "Automated Crypto Data Pipeline"
-        content: "A containerized ETL pipeline architected on GCP to solve lookahead bias. Orchestrates multi-source ingestion (Market, On-Chain, Social) with strict Bronze/Silver quality gates and Point-in-Time feature engineering."
+        content: "A Dockerized GCP data pipeline built for quantitative research. It ingests market, on-chain, and social data from multiple APIs, applies point-in-time validation to reduce survivorship/lookahead bias, and uses a two-tier local/GCS cache to cut repeated refreshes from hours to minutes."
         image: "/images/projects/pipeline_architecture.png"
         featured:
           name: "Read Architecture Breakdown"
@@ -278,22 +319,6 @@ params:
           - icon: fab fa-github
             url: "https://github.com/John-Swindell/data-engineering-etl-pipeline"
             tooltip: "View Source Code"
-
-      # --- MySQL Project ---
-      - title: "Portfolio SQL Schema & Python Automation"
-        content: "Comprehensive project showcasing the development of a relational SQL database (MySQL) for managing portfolio data. This includes Python scripts enabling automated database initialization, CRUD operations, sophisticated data querying, and reliable connectivity with a TiDB Cloud database for cloud-based persistence and access."
-        image: /images/projects/profile.png
-        featured:
-          name: View on GitHub
-          link: "https://github.com/John-Swindell/Portfolio-SQL-Schema"
-        badges:
-          - "Python"
-          - "SQL"
-          - "MySQL"
-          - "Database Design"
-          - "Automation"
-          - "TiDB Cloud"
-          - "ERD"
 
       # --- Python Automation Project ---
       - title: "Async Discord Monitor"
@@ -312,27 +337,8 @@ params:
             url: "https://github.com/John-Swindell/comic-scraper-discord-bot"
             tooltip: "View Source Code"
 
-      # --- Club Projects Follow ---
-      - title: "Created Main Club Website"
-        content: "Developed and maintain the primary public-facing website for Coding United. This site serves as a central information point, integrated with all club GitHub resources, and built with HTML, Tailwind CSS, and JavaScript for a modern, responsive experience."
-        image: "/images/club-website-main-page.PNG"
-        featured:
-          name: View Club Website
-          link: "https://coding-united-commons.pages.dev/"
-        badges:
-          - "Web Development"
-          - "HTML"
-          - "Tailwind CSS"
-          - "CSS"
-          - "JavaScript"
-        # commented out because source code is private right now.
-#        links:
-#          - icon: fab fa-github
-#            url: "https://github.com/codingUnited/coding-united-commons-source"
-#            tooltip: "View Source Code"
-
       - title: "Computer Science Student Career Skill Explorer"
-        content: "Developed a web tool for CS students and club members to explore career paths and self-assess skills. Users complete checklists, and upon generating a summary, a Cloudflare Worker securely calls the Gemini API giving a personalized rundown of their current strengths, areas for further development, and career path alignments."
+        content: "Built a lightweight AI-assisted career exploration tool for CS students and Coding United members. Users complete self-assessment checklists, then a Cloudflare Worker calls the Gemini API to summarize strengths, gaps, and career-path alignments."
         image: "/images/skills-checklist-site-animation.gif"
         featured:
           name: View Skill Explorer
@@ -352,50 +358,6 @@ params:
 #          - icon: fab fa-github
 #            url: "https://github.com/codingUnited/career-skill-explorer"
 #            tooltip: "View Source Code"
-
-
-      - title: "Developer Onboarding Templates (Python & Docker)"
-        content: "Designed and implemented standardized, well-documented starter templates for Python (with venv/PyCharm guidance) and Docker. These templates streamline project initiation for Coding United members, promote best practices, and lower the barrier to entry for new coders."
-        image: "/images/docker-template-picture.PNG"
-        featured:
-          name: View Docker Template
-          link: "https://github.com/codingUnited/docker-template"
-        badges:
-          - "Python"
-          - "Docker"
-          - "Developer Tools"
-          - "Technical Writing"
-          - "Git"
-        links:
-          - icon: fab fa-python
-            url: "https://github.com/codingUnited/python-template"
-            tooltip: "View The Python Template"
-
-
-
-
-      - title: "Coding United - GitHub Ecosystem & Resource Hub"
-        content: "Led the collaborative initiative to structure and build out Coding United's GitHub organization. This involved creating a central 'Club Hub' guide for member onboarding and information, an 'Awesome Resources' list for community learning, establishing documentation standards (Code of Conduct, Contributing Guidelines), and designing the main organization profile to enhance engagement and resource accessibility."
-        image: "/images/club-hub-picture.PNG"
-        featured:
-          name: View Club Hub
-          link: "https://github.com/codingUnited/coding-united-hub"
-        badges:
-          - "GitHub"
-          - "Documentation"
-          - "Community Building"
-          - "Markdown"
-          - "Leadership"
-        links:
-          - icon: fas fa-book-open
-            url: "https://github.com/codingUnited/awesome-club-resources"
-            tooltip: "Awesome Resources List"
-          - icon: fas fa-hands-helping
-            url: "https://github.com/codingUnited/.github/blob/main/CONTRIBUTING.md"
-            tooltip: "Contribution Guide"
-          - icon: fas fa-shield-alt
-            url: "https://github.com/codingUnited/.github/blob/main/CODE_OF_CONDUCT.md"
-            tooltip: "Code of Conduct"
 
 
   contact:

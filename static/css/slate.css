@@ -54,6 +54,61 @@ body.dark .card {
     border: 1px solid #7083ad !important;
 }
 
+#experience .experience-company-link,
+#experience .experience-company-name {
+    color: var(--text-color) !important;
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 1.2;
+    text-decoration: none !important;
+}
+
+body.dark #experience .experience-company-link,
+body.dark #experience .experience-company-name {
+    color: #eceff4 !important;
+}
+
+#experience .experience-company-link::after {
+    display: none !important;
+}
+
+#experience .experience-company-separator {
+    font-size: 1rem;
+    margin: 0 0.25rem;
+    opacity: 0.75;
+}
+
+#projects .card .card-head {
+    aspect-ratio: 1 / 1.12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-background-color) !important;
+}
+
+#projects .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+#projects .project-image-dark {
+    display: none;
+}
+
+body.dark #projects .project-image-light {
+    display: none;
+}
+
+body.dark #projects .project-image-dark {
+    display: block;
+}
+
+#projects .card:hover .card-img-top {
+    transform: scale(1.04);
+}
+
 /* --- Single Page Overrides --- */
 
 /* Hides the auto-generated featured image at the top of the post */

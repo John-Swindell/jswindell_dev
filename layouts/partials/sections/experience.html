@@ -24,7 +24,7 @@
                       aria-controls="{{ $paneId }}"
                       aria-selected="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
               >
-                {{ $element.company }}
+                {{ $element.tabLabel | default $element.company }}
               </button>
             </li>
             {{ end }}
@@ -45,10 +45,11 @@
               <div>
                 <span class="h4">{{ .job }}</span>
                 {{ if .companyUrl }}
-                <small>-</small>
-                <a href="{{ .companyUrl }}" target="_blank" rel="noopener noreferrer">{{ .company }}</a>
+                <small class="experience-company-separator">-</small>
+                <a class="experience-company-link" href="{{ .companyUrl }}" target="_blank" rel="noopener noreferrer">{{ .company }}</a>
                 {{ else if .company }}
-                <small>-</small> {{ .company }}
+                <small class="experience-company-separator">-</small>
+                <span class="experience-company-name">{{ .company }}</span>
                 {{ end }}
                 <div class="pb-1">
                   <small>{{ .date }}</small>

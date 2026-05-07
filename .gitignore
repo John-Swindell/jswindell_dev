@@ -1,6 +1,7 @@
 /config.yaml
 .vscode
 .idea
+/docs/
 
 ### Hugo ###
 # Generated files by hugo

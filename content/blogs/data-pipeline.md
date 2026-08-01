@@ -1,9 +1,9 @@
 ---
-title: "Enterprise Crypto Data Pipeline Architecture"
+title: "Building a Crypto Data Pipeline"
 date: 2026-01-30
 image: "/images/projects/diagram_simple_transparent.webp"
-description: "A deep dive into the survivorship-bias-free ETL architecture built for Tekly Studio x Crypt0nest."
-summary: "A deep dive into the survivorship-bias-free ETL architecture built for Tekly Studio x Crypt0nest."
+description: "A Dockerized GCP pipeline for collecting cleaner historical crypto data without hammering external APIs."
+summary: "A Dockerized GCP pipeline for collecting cleaner historical crypto data without hammering external APIs."
 tags: ["Data Engineering", "GCP", "Python", "Architecture"]
 ---
 {{< button link="https://jswindell.dev" >}}
@@ -22,54 +22,30 @@ View More Blogs
 <br>
 <br>
 
-### The Challenge
+### The data problem
 
-Building a reliable data foundation for quantitative research requires solving two massive problems: Survivorship Bias and Lookahead Bias. Most retail datasets only include assets that exist *today*, ignoring failed projects. This leads to backtests that perform impossibly well because they never "bet" on the losers.
+I built this pipeline for research that needed a believable picture of the crypto market at different points in time. Using only the assets that exist today makes old backtests look better than they should because failed projects disappear from the sample.
 
-### System Architecture
+Timing creates another problem. A metric may describe an earlier event but only become available later. If a model uses it too soon, the backtest is quietly learning from the future.
 
-*(Click the diagram to view full resolution)*
+### The pipeline
+
+The pipeline rebuilds a top-200 asset universe for each historical date, then collects market, on-chain, and social data for that universe.
 
 [![Pipeline Architecture](/images/projects/pipeline_architecture.webp)](/images/projects/pipeline_architecture.webp)
 
-### The Solution
+Raw API responses are stored before any cleanup. A second layer standardizes schemas, removes bad outliers, and prepares the data for feature work. Keeping those stages separate makes it possible to inspect the original response when a transformed value looks wrong.
 
-I architected a multi-stage ETL pipeline on Google Cloud Platform that reconstructs the Top 200 coin universe as it existed at any historical point in time.
+To reduce unnecessary API calls, the pipeline checks a local cache first and a shared Google Cloud Storage cache second. That reduced external requests by more than 90 percent and made repeated research runs much faster.
 
-#### Key Architectural Decisions
+### Keeping historical data honest
 
-1. **Two-Tier Caching (GCSCachingManager):**
-* **Level 1:** Local disk cache for rapid development.
-* **Level 2:** Shared Google Cloud Storage (GCS) bucket for team collaboration.
-* *Impact:* Reduced external API calls by 90% and eliminated rate-limit bottlenecks.
+Features are timestamped according to when the information was actually available, not only when the underlying event happened. The pipeline also combines related liquidity, such as wrapped and native versions of the same asset, without counting market capitalization twice.
 
+A schema check runs on pull requests and flags unexpected changes in previously collected history. That gives us a chance to investigate an upstream revision before it changes a model result.
 
-2. **Bronze-to-Silver Layering:**
-* **Bronze:** Raw JSON responses from CoinGecko, DeFiLlama, and LunarCrush are stored immutably.
-* **Silver:** A sanitization gate removes outliers and standardizes schemas before feature engineering occurs.
+### Repeatable runs
 
+The pipeline runs in Docker so local and production jobs use the same Python environment. A small orchestration script runs universe generation, ingestion, validation, and transformation in order. If validation fails, the job stops instead of passing questionable data downstream.
 
-3. **Anti-Repainting Validation:**
-* A custom `SchemaValidator` runs on every pull request to ensure that historical data has not changed, protecting the integrity of our ML models.
-
-
-4. **Point-in-Time Feature Engineering:**
-* *Context:* Raw data availability does not equal research readiness. To prevent lookahead bias, the pipeline implements strict lagging logic.
-* *Publication Lags:* On-chain metrics (like TVL) and social sentiment scores are timestamped to their *publication* time, not their event time, preventing models from acting on information before it is public.
-* *Canonical Aggregation:* The system automatically detects and merges liquidity from bridged assets (e.g., merging Wrapped Bitcoin volume into native Bitcoin) to create a unified view of asset liquidity without double-counting market capitalization.
-
-
-5. **Containerized Orchestration:**
-* *Reproducibility:* The entire pipeline is containerized using Docker, ensuring that the execution environment—including Python 3.11 dependencies—is identical across local development and production.
-* *Logic:* A fail-fast shell script enforces a strict dependency graph: Universe Generation → Ingestion → Validation → Transformation.
-* *Safety:* If any step fails validation, the entire pipeline halts immediately, preventing corrupted data from silently propagating to downstream analytics dashboards.
-
-
-
-### The Result
-
-This architecture moved the organization from ad-hoc CSV exports to a mature Data Lakehouse model.
-
-* **Reliability:** The two-tier caching system reduced external API dependency by over 90%, virtually eliminating `429 Too Many Requests` errors during heavy backtesting sessions.
-* **Accuracy:** We successfully eliminated survivorship bias, resulting in backtests that accurately reflect historical market conditions rather than over-fitting to current winners.
-* **Scalability:** The system now ingests millions of data points across market, on-chain, and social dimensions daily, serving as the single source of truth for both the internal analytics dashboard and the quantitative research team.
+The result was a shared research dataset that was faster to work with and much less likely to reward a model for information it could not have known at the time.

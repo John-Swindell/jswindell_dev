@@ -1,9 +1,9 @@
 ---
-title: "Machine Learning Research Framework: Crypto Momentum"
+title: "Testing a Crypto Momentum Model"
 date: 2026-01-28
 image: "/images/projects/quant_tearsheet_thumb.webp"
-description: "A robust backtesting engine built with CatBoost and QuantStats to stress-test volatility strategies against market benchmarks."
-summary: "A robust backtesting engine built with CatBoost and QuantStats to stress-test volatility strategies against market benchmarks."
+description: "A backtesting project that helped me reject a profitable-looking model once its risk showed up."
+summary: "A backtesting project that helped me reject a profitable-looking model once its risk showed up."
 tags: ["Machine Learning", "Python", "Quantitative Finance", "CatBoost", "Risk Analysis"]
 ---
 {{< button link="https://jswindell.dev" >}}
@@ -22,36 +22,34 @@ View More Blogs
 <br>
 <br>
 
-### The Objective
-In quantitative finance, the goal of a backtesting engine isn't just to validate winning strategies. It is to disqualify risky ones before capital is deployed. This project established a standardized research pipeline to rigorously evaluate momentum-based cryptocurrency strategies using gradient boosting.
+### What I wanted to test
 
-### Diagnostic Capabilities
-The framework was put to the test evaluating an experimental momentum strategy against a Bitcoin benchmark during the 2023-2025 bull run. The system successfully identified key risk factors that a simple PnL check would have missed.
+This project started with a simple question. Could a momentum model beat holding Bitcoin without taking on much more risk?
 
-#### Performance Analysis (Strategy vs. Benchmark)
-While the model delivered a strong 104.62% Cumulative Return, the QuantStats diagnostics revealed it was effectively a high-beta play that failed to capture the full upside of the benchmark.
+I built a repeatable research pipeline around CatBoost and tested it against Bitcoin during the 2023 to 2025 market run. The important part was not finding a profitable chart. It was building enough diagnostics to tell me when a profitable result was still a bad trade.
 
-* **Benchmark (BTC) Sharpe:** 1.75 | **Strategy Sharpe:** 1.03
-* **Benchmark (BTC) Drawdown:** -23.95% | **Strategy Drawdown:** -57.24%
-* **Diagnosis:** The framework flagged that despite positive returns, the strategy carried unacceptable volatility risk (Sortino 1.63 vs BTC 2.91), indicating the need for stricter position sizing during market corrections.
+### Building the backtest
 
-[*(Click to view full QuantStats Report)*](https://model-performance-report.pages.dev/)
+The pipeline turns OHLCV data into a feature matrix with pandas and TA-Lib. Scaling and outlier handling happen inside an expanding window, so each prediction only uses information that would have existed at that point in the test.
 
-### The Infrastructure
-To ensure these diagnostics were reliable, the pipeline was architected to avoid common ML pitfalls:
+I used walk-forward validation instead of random cross-validation because market data has an order that cannot be shuffled away. CatBoost then estimated the chance of a positive return over the next seven days.
 
-#### 1. Point-in-Time Data Engineering
-The pipeline transforms raw OHLCV data into a Feature Matrix using `pandas` and `ta-lib`. Crucially, it uses Winsorization and Robust Scaling inside an expanding window loop. This prevents lookahead bias because the model never sees the global min/max of the dataset, only what was available at that specific moment in history.
+### What the numbers showed
 
-#### 2. The Model: CatBoost Regressor
-I utilized CatBoost (Gradient Boosting on Decision Trees) for its ability to handle non-linear market regimes.
-* **Target:** Predicting the probability of a positive 7-day forward return.
-* **Validation:** Utilized TimeSeriesSplit (Walk-Forward Validation) rather than standard K-Fold CV to respect the temporal nature of financial data.
+The strategy returned 104.62 percent, which looked promising on its own. The comparison with Bitcoin told a different story.
 
-### Key Learnings
-The Signal Funnel analysis revealed that while the Extreme Momentum Filter correctly avoided several crashes (e.g., a -14.6% drop in DOGE), the overall portfolio remained too correlated to the broad market. This finding has led to the current development of Market Neutral strategies using the same reliable backtesting infrastructure.
+| Metric | Strategy | Bitcoin |
+|---|---:|---:|
+| Sharpe ratio | 1.03 | 1.75 |
+| Maximum drawdown | -57.24% | -23.95% |
+| Sortino ratio | 1.63 | 2.91 |
 
-### Technology Stack
-* **Core:** Python 3.11, Pandas, NumPy
-* **ML:** CatBoost, Scikit-Learn (GridSearchCV)
-* **Analysis:** QuantStats, SHAP (Feature Importance), Matplotlib
+The model made money, but it did so with much worse downside and less return for each unit of risk. It was mostly a more fragile way to stay exposed to the same market.
+
+[View the full QuantStats report](https://model-performance-report.pages.dev/)
+
+### What I kept from it
+
+The signal filters did avoid some sharp individual drops, including a 14.6 percent decline in DOGE, but the portfolio was still too correlated with the broader market. I did not treat the positive return as a successful model.
+
+The useful result was the research framework itself. It made the weakness obvious and gave me a cleaner base for testing market-neutral ideas, where the model has to find a signal instead of relying on the whole market moving up.

@@ -4,6 +4,7 @@ date: 2026-01-28
 image: "/images/projects/quant_tearsheet_thumb.webp"
 description: "A backtesting project that helped me reject a profitable-looking model once its risk showed up."
 summary: "A backtesting project that helped me reject a profitable-looking model once its risk showed up."
+source: "https://github.com/John-Swindell/machine-learning-research-model"
 tags: ["Machine Learning", "Python", "Quantitative Finance", "CatBoost", "Risk Analysis"]
 ---
 {{< button link="https://jswindell.dev" >}}

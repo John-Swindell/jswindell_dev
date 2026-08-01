@@ -6,7 +6,7 @@
             <div class="col-sm-12 col-md-12 col-lg-8 content {{ if .Site.Params.animate }}animate{{ end }}" id="primary-font">
                 <span class="subtitle">{{ $hero.intro }}</span>
                 <h1>{{ $hero.title }}</h1>
-                <h2>{{- range $index, $line := split $hero.subtitle "\n" -}}{{- if $index }}<br>{{ end -}}{{ $line }}{{- end -}}</h2>
+                <h2>{{- range $line := split $hero.subtitle "\n" -}}<span class="hero-headline-line">{{ $line }}</span>{{- end -}}</h2>
                 <p class="hero-content">{{ $hero.content | markdownify }}</p>
                 <div class="row">
                     <div class="col-auto h-100">

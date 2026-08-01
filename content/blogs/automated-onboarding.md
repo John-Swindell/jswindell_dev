@@ -4,6 +4,7 @@ date: 2026-02-01
 image: "/images/projects/automated-onboarding-base-final.webp"
 description: "How I connected Airtable, DocuSign, Google Workspace, and generated training materials into one onboarding flow."
 summary: "How I connected Airtable, DocuSign, Google Workspace, and generated training materials into one onboarding flow."
+source: "https://github.com/John-Swindell/automated-onboarding-pipeline"
 tags: ["Python", "GitHub Actions", "AI", "Automation", "Airtable API", "DocuSign API", "JWT", "OpenAI API"]
 ---
 {{< button link="https://jswindell.dev" >}}

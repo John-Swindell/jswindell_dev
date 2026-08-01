@@ -89,9 +89,9 @@ params:
 
   hero:
     enable: true
-    intro: "Hi  , my name is"
+    intro: "Hi, my name is"
     title: "John Swindell."
-    subtitle: "Platform Engineer\nCloud Infrastructure\nApplied AI"
+    subtitle: "Platform Engineer\nCloud Infrastructure\nApplied AI & Automation"
     content: "I build the platform layer that turns internal ideas into reliable software. At the Florida Panthers, I design cloud infrastructure, delivery workflows, shared tooling, and governed paths for data and AI-assisted applications."
     image: "/images/hero.webp"
     bottomImage:
@@ -391,7 +391,7 @@ params:
       # facebook: ""
 
   listPages:
-    disableFeaturedImage: false
+    disableFeaturedImage: true
 
   singlePages:
     socialShare: true

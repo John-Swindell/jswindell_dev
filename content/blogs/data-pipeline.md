@@ -4,6 +4,7 @@ date: 2026-01-30
 image: "/images/projects/diagram_simple_transparent.webp"
 description: "A Dockerized GCP pipeline for collecting cleaner historical crypto data without hammering external APIs."
 summary: "A Dockerized GCP pipeline for collecting cleaner historical crypto data without hammering external APIs."
+source: "https://github.com/John-Swindell/data-engineering-etl-pipeline"
 tags: ["Data Engineering", "GCP", "Python", "Architecture"]
 ---
 {{< button link="https://jswindell.dev" >}}

@@ -4,6 +4,7 @@ date: 2026-01-31
 image: "/images/projects/discord_bot_image_project.webp"
 description: "A small async Python bot I built to help a friend catch limited comic book releases."
 summary: "A small async Python bot I built to help a friend catch limited comic book releases."
+source: "https://github.com/John-Swindell/comic-scraper-discord-bot"
 tags: ["Python", "Asyncio", "Docker", "Developer Experience", "Discord API"]
 ---
 {{< button link="https://jswindell.dev" >}}

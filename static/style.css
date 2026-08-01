@@ -1,5 +1,88 @@
+#hero h2 {
+  font-size: clamp(40px, 5vw, 54px);
+  line-height: 1.1;
+  margin-top: 0.6rem;
+}
+
+#hero .hero-headline-line {
+  display: block;
+  white-space: nowrap;
+}
+
+#list-page .blog-list-header {
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+}
+
+#list-page .blog-list-header p {
+  color: var(--text-secondary-color);
+  margin: 0.75rem 0 0;
+}
+
+#list-page .blog-card {
+  min-height: 260px;
+}
+
+#list-page .blog-card-title {
+  display: inline-block;
+  color: var(--text-color) !important;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+#list-page .blog-card .card-text p {
+  margin-bottom: 0;
+}
+
+#list-page .post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+}
+
+#list-page .blog-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+#list-page .blog-card-actions .btn {
+  float: none;
+}
+
 @media (max-width: 575.98px) {
   #hero h2 {
-    font-size: clamp(32px, 9vw, 36px);
+    font-size: clamp(26px, 7.2vw, 30px);
+  }
+
+  #list-page .blog-card {
+    min-height: 0;
+  }
+
+  #list-page .post-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #list-page .blog-card-actions {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #list-page .blog-card-actions .btn {
+    flex: 1 1 auto;
+  }
+
+  #single .page-content a.custom-button {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: center;
+    width: 100%;
   }
 }

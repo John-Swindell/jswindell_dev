@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning Research Framework: Crypto Momentum"
 date: 2026-01-28
-image: "/images/projects/quant_tearsheet_thumb.png"
+image: "/images/projects/quant_tearsheet_thumb.webp"
 description: "A robust backtesting engine built with CatBoost and QuantStats to stress-test volatility strategies against market benchmarks."
 tags: ["Machine Learning", "Python", "Quantitative Finance", "CatBoost", "Risk Analysis"]
 ---

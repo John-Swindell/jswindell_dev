@@ -10,10 +10,10 @@
                     {{ if .image }}
                     <div class="card-head">
                         {{ if .imageDark }}
-                        <img class="card-img-top project-image-light" src="{{ .image }}" alt="{{ .title }}">
-                        <img class="card-img-top project-image-dark" src="{{ .imageDark }}" alt="{{ .title }}">
+                        <img class="card-img-top project-image-light" src="{{ .image }}" alt="{{ .title }}" loading="lazy" decoding="async">
+                        <img class="card-img-top project-image-dark" src="{{ .imageDark }}" alt="{{ .title }}" loading="lazy" decoding="async">
                         {{ else }}
-                        <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
+                        <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}" loading="lazy" decoding="async">
                         {{ end }}
                     </div>
                     {{ end }}
@@ -56,10 +56,10 @@
                     {{ if .Params.image }}
                     <div class="card-head">
                         {{ if .Params.imageDark }}
-                        <img class="card-img-top project-image-light" src="{{ .Params.image }}" alt="{{ .Title }}">
-                        <img class="card-img-top project-image-dark" src="{{ .Params.imageDark }}" alt="{{ .Title }}">
+                        <img class="card-img-top project-image-light" src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
+                        <img class="card-img-top project-image-dark" src="{{ .Params.imageDark }}" alt="{{ .Title }}" loading="lazy" decoding="async">
                         {{ else }}
-                        <img class="card-img-top" src="{{ .Params.image }}" alt="{{ .Title }}">
+                        <img class="card-img-top" src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" decoding="async">
                         {{ end }}
                     </div>
                     {{ end }}

@@ -92,9 +92,9 @@ params:
     title: "John Swindell."
     subtitle: "Technical Lead | Founder | AI Platform Engineer"
     content: "I build and deploy AI tooling where product, data, and infrastructure meet. At Tekly Studio, I own product delivery, CI/CD guardrails, and AI-assisted workflows across a mixed BS/MS engineering cohort. I also founded Ellide to turn messy course documents into AI-ready teaching materials."
-    image: "/images/hero.png"
+    image: "/images/hero.webp"
     bottomImage:
-      enable: true
+      enable: false
     button:
       enable: false
       name: "Download Resume"
@@ -117,7 +117,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png" 
+    image: "/images/me.webp"
     content: |-
       I am an early-career engineer and founder focused on applied AI systems: document-to-context pipelines, LLM-ready workflows, data infrastructure, and automation that lets non-specialist users operate complex systems without living inside the implementation details.
 
@@ -244,8 +244,8 @@ params:
       # --- Founder / AI Product Project ---
       - title: "Ellide - AI Study Materials for Educators"
         content: "Founded and launched Ellide.co, an educator-first AI workflow that turns syllabi, slides, readings, handouts, and OCR-heavy PDFs into AI-ready teaching documents. The product is built around grounded context, optional teaching guidance, and cleaner Markdown/JSON outputs for ChatGPT, Claude, Gemini, internal tools, and RAG-style workflows."
-        image: "/images/projects/ellide-homepage.png"
-        imageDark: "/images/projects/ellide-homepage-dark.png"
+        image: "/images/projects/ellide-homepage.webp"
+        imageDark: "/images/projects/ellide-homepage-dark.webp"
         featured:
           name: "Visit Ellide"
           link: "https://ellide.co/"
@@ -268,7 +268,7 @@ params:
       # --- Platform Engineering Project ---
       - title: "Automated Onboarding Pipeline & Headless LMS"
         content: "Built a production-critical onboarding platform on Google Cloud Run for Tekly Studio. The system orchestrates Airtable, DocuSign, Google Workspace, email flows, Gemini-generated LMS curricula, Terraform-managed deployment, and GitHub Actions automation so a mixed BS/MS contributor cohort can onboard without fragile manual handoffs."
-        image: "/images/projects/automated-onboarding-base-final.png"
+        image: "/images/projects/automated-onboarding-base-final.webp"
         featured:
           name: "Read Architecture Breakdown"
           link: "/blogs/automated-onboarding"
@@ -289,7 +289,7 @@ params:
       # --- Machine Learning Project ---
       - title: "ML-Driven Quant Research Model"
         content: "A model-validation framework using CatBoost, SHAP diagnostics, QuantStats, and walk-forward validation to test momentum strategies without leaking future data. Built to identify overfitting, regime sensitivity, and risk-adjusted performance issues before a strategy reaches production research workflows."
-        image: "/images/projects/quant_tearsheet_thumb.png"
+        image: "/images/projects/quant_tearsheet_thumb.webp"
         featured:
           name: "Read Case Study"
           link: "/blogs/quant-momentum-research"
@@ -307,7 +307,7 @@ params:
        # --- Data Engineering Crypt0nest Project ---
       - title: "Automated Crypto Data Pipeline"
         content: "A Dockerized GCP data pipeline built for quantitative research. It ingests market, on-chain, and social data from multiple APIs, applies point-in-time validation to reduce survivorship/lookahead bias, and uses a two-tier local/GCS cache to cut repeated refreshes from hours to minutes."
-        image: "/images/projects/pipeline_architecture.png"
+        image: "/images/projects/pipeline_architecture.webp"
         featured:
           name: "Read Architecture Breakdown"
           link: "/blogs/data-pipeline"
@@ -323,7 +323,7 @@ params:
       # --- Python Automation Project ---
       - title: "Async Discord Monitor"
         content: "Real-time inventory tracker built on a non-blocking asyncio architecture. Features a custom offline testing harness for safe DOM parsing and maintains a persistent WebSocket connection for zero-latency alerts."
-        image: "/images/projects/discord_bot_image_project.png"
+        image: "/images/projects/discord_bot_image_project.webp"
         featured:
           name: "Read About This Project"
           link: "/blogs/comic-scraper-bot"
@@ -339,7 +339,7 @@ params:
 
       - title: "Computer Science Student Career Skill Explorer"
         content: "Built a lightweight AI-assisted career exploration tool for CS students and Coding United members. Users complete self-assessment checklists, then a Cloudflare Worker calls the Gemini API to summarize strengths, gaps, and career-path alignments."
-        image: "/images/skills-checklist-site-animation.gif"
+        image: "/images/skills-checklist-site-animation.webp"
         featured:
           name: View Skill Explorer
           link: "https://coding-united-skill.pages.dev/"
@@ -415,6 +415,3 @@ params:
     articleRecent: "Jan 2, 2006"
 
   # Must be added for stylesheet to actually work properly / load.
-  # customCSS param is worthless, as are the text color params.
-  customScripts: |
-      <link rel="stylesheet" href="/css/slate.css">

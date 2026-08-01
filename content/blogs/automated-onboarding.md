@@ -1,7 +1,7 @@
 ---
 title: "Automated Onboarding Pipeline & Headless LMS"
 date: 2026-02-01
-image: "/images/projects/automated-onboarding-base-final.png"
+image: "/images/projects/automated-onboarding-base-final.webp"
 description: ""
 tags: ["Python", "GitHub Actions", "AI", "Automation", "Airtable API", "DocuSign API", "JWT", "OpenAI API"]
 ---
@@ -29,7 +29,7 @@ I architected a modular automation pipeline using Python micro-services. The sys
 
 *(Click the diagram to view full resolution)*
 
-[![Automation Architecture](/images/projects/tekly-onboarding-diagram.png)](/images/projects/tekly-onboarding-diagram.png)
+[![Automation Architecture](/images/projects/tekly-onboarding-diagram.webp)](/images/projects/tekly-onboarding-diagram.webp)
 
 ### Orchestration & State Management
 

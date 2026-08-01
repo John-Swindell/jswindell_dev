@@ -1,38 +1,55 @@
-# John Swindell's Portfolio Website Source
+# John Swindell's Portfolio Website
 
-This repository contains the source code for my personal portfolio website, built using the Hugo SSG.
+Source for [jswindell.dev](https://jswindell.dev), a personal portfolio built with Hugo and deployed through Cloudflare Pages.
 
-**Live Site:** [**https://jswindell.dev**](https://jswindell.dev)
+## Technology
 
-## Overview
+- **Static site generator:** Hugo Extended (`v0.147.0` or newer recommended)
+- **Theme:** [hugo-profile](https://github.com/gurusabarish/hugo-profile), pinned as a Git submodule
+- **Customizations:** Project-owned template overrides in `layouts/` and site configuration in `hugo.yaml`
+- **Deployment:** Cloudflare Pages, deployed from the `main` branch
 
-This site serves as my personal portfolio, showcasing my projects, experience, skills, and academic background as a Computer Science student at SNHU.
+## Local development
 
-## Technology Stack
+Clone the repository and its theme:
 
-* **SSG:** [Hugo](https://gohugo.io/) (v0.147.0+ used locally during development)
-* **Theme:** Based on [hugo-profile](https://github.com/gurusabarish/hugo-profile) by Gurusabarish (This repository is a fork). Modifications and content are my own.
-* **Deployment:** Hosted on [Cloudflare Pages](https://pages.cloudflare.com/), automatically deployed from the `main` branch.
+```bash
+git clone --recurse-submodules https://github.com/John-Swindell/jswindell_dev.git
+cd jswindell_dev
+```
 
-## Local Development
+If the repository is already cloned but the theme directory is empty, initialize it with:
 
-To run this site locally (requires Hugo extended version installed):
+```bash
+git submodule update --init --recursive
+```
 
-1.  Clone this repository:
-    ```bash
-    git clone [https://github.com/John-Swindell/jswindell.dev.git](https://github.com/John-Swindell/jswindell.dev.git)
-    cd jswindell.dev
-    ```
-2.  Initialize the theme submodule:
-    ```bash
-    git submodule update --init --recursive
-    ```
-3.  Run the Hugo development server:
-    ```bash
-    hugo server -D
-    ```
-4.  Open `http://localhost:1313` in your browser.
+Start the development server:
+
+```bash
+hugo server -D
+```
+
+Then open [http://localhost:1313](http://localhost:1313).
+
+## Production build
+
+```bash
+hugo --gc --minify
+```
+
+The generated site is written to `public/`. Cloudflare Pages settings are managed outside this repository.
+
+## Project structure
+
+- `hugo.yaml` — homepage content and site configuration
+- `content/blogs/` — project write-ups and blog posts
+- `layouts/` — local template and component overrides
+- `static/` — images, downloadable files, and other static assets
+- `themes/hugo-profile/` — pinned upstream theme submodule
+
+When adding raster images, prefer WebP and avoid committing unused source exports. Keep full-resolution diagrams only when visitors need to open or inspect them at that resolution.
 
 ## Contact
 
-You can reach me via [LinkedIn](https://www.linkedin.com/in/john-swindell/) or email at `john@jswindell.dev`.
+[LinkedIn](https://www.linkedin.com/in/john-swindell/) · [john@jswindell.dev](mailto:john@jswindell.dev)

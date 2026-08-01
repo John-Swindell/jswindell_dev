@@ -163,4 +163,38 @@
   #single .page-content a.custom-button::after {
       display: none !important;
   }
+
+  /* Render only the Font Awesome icons this site uses. The theme's full
+     1.5 MB JavaScript bundle is replaced by a tiny local compatibility file. */
+  .fa,
+  .fas,
+  .fab {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background-color: currentColor;
+      -webkit-mask-image: var(--fa-icon);
+      mask-image: var(--fa-icon);
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      vertical-align: -0.125em;
+  }
+
+  .fa-xs {
+      font-size: 0.75em;
+  }
+
+  .fa-linkedin { --fa-icon: url('{{ "fontawesome-6/svgs/brands/linkedin.svg" | relURL }}'); }
+  .fa-github { --fa-icon: url('{{ "fontawesome-6/svgs/brands/github.svg" | relURL }}'); }
+  .fa-twitter { --fa-icon: url('{{ "fontawesome-6/svgs/brands/twitter.svg" | relURL }}'); }
+  .fa-whatsapp { --fa-icon: url('{{ "fontawesome-6/svgs/brands/whatsapp.svg" | relURL }}'); }
+  .fa-globe { --fa-icon: url('{{ "fontawesome-6/svgs/solid/globe.svg" | relURL }}'); }
+  .fa-code { --fa-icon: url('{{ "fontawesome-6/svgs/solid/code.svg" | relURL }}'); }
+  .fa-info-circle { --fa-icon: url('{{ "fontawesome-6/svgs/solid/circle-info.svg" | relURL }}'); }
+  .fa-angle-up { --fa-icon: url('{{ "fontawesome-6/svgs/solid/angle-up.svg" | relURL }}'); }
+  .fa-envelope { --fa-icon: url('{{ "fontawesome-6/svgs/solid/envelope.svg" | relURL }}'); }
 </style>

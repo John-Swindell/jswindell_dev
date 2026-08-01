@@ -1,7 +1,7 @@
 ---
 title: "The Birthday Bot: Async Scraping for a UX Engineer"
 date: 2026-01-31
-image: "/images/projects/discord_bot_image_project.png"
+image: "/images/projects/discord_bot_image_project.webp"
 description: "How I built a non-blocking Python scraper as a gift for a friend, containerized it for 24/7 uptime, and helped him snag a rare variant."
 tags: ["Python", "Asyncio", "Docker", "Developer Experience", "Discord API"]
 ---

@@ -6,16 +6,13 @@
     <div class="row justify-content-center pt-4">
       {{ range $posts }}
       <div class="col-lg-4 col-md-6 my-3">
-        <article class="card h-100 writing-card">
-          <div class="card-body bg-transparent p-4">
+        <a class="card my-3 h-100 p-3 writing-card" href="{{ .RelPermalink }}" title="{{ .Title }}">
+          <div class="card-body bg-transparent">
+            <h5 class="card-title bg-transparent">{{ .Title }}</h5>
+            <div class="card-text secondary-font">{{ .Params.summary }}</div>
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format (":date_medium" | default "Jan 2, 2006") }}</time>
-            <a href="{{ .RelPermalink }}" class="writing-card-title primary-font">{{ .Title }}</a>
-            <p class="secondary-font">{{ .Summary }}</p>
           </div>
-          <div class="writing-card-footer">
-            <a href="{{ .RelPermalink }}" class="btn btn-outline-info btn-sm">Read</a>
-          </div>
-        </article>
+        </a>
       </div>
       {{ end }}
     </div>

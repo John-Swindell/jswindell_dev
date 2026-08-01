@@ -77,6 +77,10 @@
   text-decoration: none;
 }
 
+#writing h3 {
+  color: var(--text-secondary-color) !important;
+}
+
 #writing .writing-card {
   background-color: var(--secondary-color) !important;
   border: 2px solid transparent;

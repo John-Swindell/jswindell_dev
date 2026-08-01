@@ -1,0 +1,5 @@
+@media (max-width: 575.98px) {
+  #hero h2 {
+    font-size: clamp(32px, 9vw, 36px);
+  }
+}

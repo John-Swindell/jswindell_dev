@@ -52,8 +52,9 @@ Menus:
 # --- Theme Parameters (Main Content Configuration) ---
 params:
   title: "John Swindell"
-  description: "Founder of Ellide and Technical Lead at Tekly Studio. I build AI tooling, LLM workflows, data pipelines, and automation-heavy cloud systems."
+  description: "Platform Engineer at the Florida Panthers building cloud infrastructure, internal platforms, CI/CD, and reliable tooling for data and AI workflows."
   favicon: "/fav.png"
+  customCSS: true
   useBootstrapCDN: false
   # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
   mathjax: false
@@ -90,8 +91,8 @@ params:
     enable: true
     intro: "Hi  , my name is"
     title: "John Swindell."
-    subtitle: "Technical Lead | Founder | AI Platform Engineer"
-    content: "I build and deploy AI tooling where product, data, and infrastructure meet. At Tekly Studio, I own product delivery, CI/CD guardrails, and AI-assisted workflows across a mixed BS/MS engineering cohort. I also founded Ellide to turn messy course documents into AI-ready teaching materials."
+    subtitle: "Platform Engineer\nCloud Infrastructure\nApplied AI"
+    content: "I build the platform layer that turns internal ideas into reliable software. At the Florida Panthers, I design cloud infrastructure, delivery workflows, shared tooling, and governed paths for data and AI-assisted applications."
     image: "/images/hero.webp"
     bottomImage:
       enable: false
@@ -107,8 +108,6 @@ params:
           url: "https://www.linkedin.com/in/john-swindell/"
         - icon: fab fa-github
           url: "https://github.com/John-Swindell/"
-        - icon: fas fa-globe
-          url: "https://ellide.co/"
         # - icon: fab fa-x-twitter
         #   url: "https://twitter.com/your_handle"
         #customIcons:
@@ -119,54 +118,57 @@ params:
     title: "About Me"
     image: "/images/me.webp"
     content: |-
-      I am an early-career engineer and founder focused on applied AI systems: document-to-context pipelines, LLM-ready workflows, data infrastructure, and automation that lets non-specialist users operate complex systems without living inside the implementation details.
+      I am a Platform Engineer at the Florida Panthers, embedded with the Business Intelligence team and responsible for shared infrastructure and developer tooling across a broader set of internal initiatives. My work sits between software delivery, cloud architecture, data platforms, and the people who need reliable tools without having to own every operational detail behind them.
 
-      My current work spans Technical Lead work at Tekly Studio, where I own Crypt0nest.io product delivery and set engineering standards for a 44-person mixed BS/MS intern and contributor cohort, plus founder-led product ownership at Ellide, where I am building an educator-first AI study-material platform. The common thread is the same: build useful systems, make the workflow reliable, and keep AI output grounded in the source material or operational reality it came from.
+      I currently build manifest-driven AWS application infrastructure, GitHub Actions delivery paths, QuickSight GitOps workflows, validation tooling, and reproducible Linux development environments. The common thread is platform engineering: create a strong default path, automate the fragile parts, and make recovery routine instead of exceptional.
 
-      I am also deepening my Go and Kubernetes fundamentals while preparing for the Certified Kubernetes Administrator exam.
+      I also build RAG and MCP-based context systems for governed internal data, while continuing to deepen my Go and Kubernetes fundamentals and prepare for the Certified Kubernetes Administrator exam.
     skills:
       enable: true
       title: "Core Technologies:"
       items:
-        - "AI Product Engineering"
-        - "LLM Workflows"
-        - "Python, Go, JavaScript, SQL, NoSQL"
-        - "OpenAI & Gemini API Integration"
-        - "Google Cloud Platform: Cloud Run, GCS"
-        - "Terraform, Docker, GitHub Actions"
-        - "MLOps / LLMOps / AI Tooling"
-        - "Linux, Bash, Self-Hosting"
+        - "Platform Engineering & Internal Developer Platforms"
+        - "AWS: ECS/Fargate, Lambda, S3, CloudFront, Cognito, IAM"
+        - "Terraform / HCL, Docker, GitHub Actions, OIDC"
+        - "Python, Go, SQL, Bash"
+        - "Amazon QuickSight, Redshift, SPICE"
+        - "CI/CD, Linting, Type Checking, Gitleaks"
+        - "Linux, WSL, Developer Environment Automation"
+        - "RAG, MCP, AI Agent Tooling"
         - "Data Pipelines, Validation Gates, Caching"
-        - "Technical Writing & Product Documentation"
+        - "Technical Writing & Developer Enablement"
 
 
   experience:
     enable: true
     title: "Professional Experience"
     items:
+      - job: "Platform Engineer"
+        company: "Florida Panthers"
+        tabLabel: "Florida Panthers"
+        companyUrl: "https://panthersinsights.com/"
+        date: "Jun 2026 - Present"
+        content: |
+          Platform Engineer embedded with the Business Intelligence team, building shared AWS infrastructure, delivery systems, and developer tooling for data-heavy and AI-assisted internal applications across the organization.
+          - Internal Application Platform: Designed a manifest-driven platform that builds and serves single-page applications through S3 and CloudFront, exposes tightly scoped Lambda services for governed data access, and uses Terraform modules to give internal teams a repeatable path from prototype to production.
+          - Identity and Application Governance: Integrated Microsoft Entra ID with Amazon Cognito and group-based authorization so teams can use and govern their own applications without duplicating authentication infrastructure.
+          - QuickSight GitOps: Built five-minute synchronization workflows that export QuickSight dashboards, analyses, datasets, and themes into version control, open pull requests when deployed state drifts, and provide a reliable rollback path when visual changes break working assets.
+          - Analytics Validation: Created a custom linter that compares dashboard definitions with their underlying dataset schemas, catching missing-field and invalid-reference errors that QuickSight otherwise surfaces late or silently.
+          - CI/CD and AWS Governance: Implemented GitHub OIDC, least-privilege IAM deployment roles, Terraform validation, linting, type checks, and Gitleaks scanning across fast delivery workflows. Supported more than 4,300 automation runs at approximately 99.6% success.
+          - Developer Enablement: Built an idempotent WSL bootstrap that installs corporate certificates, shell tooling, GitHub CLI, coding agents, and consistent Python environments so analysts can work in Linux without owning dependency or workstation setup problems.
+          - AI and Context Tooling: Build governed RAG and MCP-based systems that let internal users and leadership query approved business context through their existing AI tools.
+
       - job: "Technical Lead (Contract)"
         company: "Tekly Studio"
         tabLabel: "Tekly Studio Lead"
         companyUrl: "https://tekly.dev/"
-        date: "Dec 2025 - Present"
+        date: "Dec 2025 - Jun 2026"
         content: |
-          Hired by the CEO as Technical Lead to own technical delivery for Crypt0nest.io products and set engineering standards for a 44-person mixed BS/MS intern and contributor cohort, majority MS-level.
+          Served as Technical Lead for Crypt0nest.io product delivery and engineering standards across a 44-person mixed BS/MS intern and contributor cohort, majority MS-level.
           - AI-Driven Onboarding Platform: Built a production-critical onboarding system on Google Cloud Run that connects Airtable, Google Workspace, DocuSign, email workflows, and Gemini-generated LMS curricula.
           - CI/CD and Engineering Governance: Architected GitHub Actions workflows, RBAC controls, review gates, and branching standards so contributors can ship through auditable delivery paths.
           - AI Enablement: Built internal OpenAI/Gemini tooling, including context-aware support workflows and documentation-grounded training content for new contributors.
-          - Product Delivery: Own product execution for Crypt0nest.io workstreams while translating ambiguous founder/operator requirements into maintainable software and clear technical documentation.
-
-      - job: "Founder"
-        company: "Ellide"
-        tabLabel: "Ellide Founder"
-        companyUrl: "https://ellide.co/"
-        date: "May 2026 - Present"
-        content: |
-          Founded Ellide, an AI study-material platform that turns syllabi, slides, scanned readings, and handouts into AI-ready teaching documents grounded in the actual course material.
-          - Product Ownership: Designed the public educator workflow, student experience, developer positioning, and privacy-first product narrative for a closed-source AI document platform.
-          - LLM-Ready Documents: Built the product around a practical problem in AI adoption: messy PDFs and raw uploads often produce generic answers, while structured Markdown, JSON, and teaching guidance give LLMs cleaner context.
-          - Educator-First AI: Focused the product on guided learning, source references, Socratic tutoring behavior, and instructor-defined teaching posture instead of generic answer dumping.
-          - Developer Surface: Published a developer-facing workflow at dev.ellide.co for OCR-heavy documents, structured Markdown/JSON output, and downstream use in AI chats, internal tools, and RAG pipelines.
+          - Product Delivery: Owned Crypt0nest.io workstreams while translating ambiguous operator requirements into maintainable software and clear technical documentation.
 
       - job: "MLOps & Data Engineer Intern"
         company: "Crypt0nest.io"
@@ -214,14 +216,14 @@ params:
 
   achievements:
     enable: true
-    title: "Product, Leadership & Honors"
+    title: "Leadership & Honors"
     items:
-      - title: "Founder - Ellide"
-        content: "Launched Ellide.co, an educator-first AI study-material platform that turns syllabi, slides, scanned readings, and handouts into AI-ready teaching materials grounded in the actual course context."
-        url: "https://ellide.co/"
+      - title: "Platform Engineer - Florida Panthers"
+        content: "Selected for a full Platform Engineer role building AWS infrastructure, internal developer platforms, GitOps workflows, and developer tooling for the Florida Panthers."
+        url: "https://panthersinsights.com/"
 
-      - title: "Technical Lead - Tekly Studio"
-        content: "Hired by the CEO as Technical Lead to own Crypt0nest.io product delivery and set engineering standards, code review paths, and CI/CD guardrails for a 44-person mixed BS/MS intern and contributor cohort."
+      - title: "Technical Lead (Contract) - Tekly Studio"
+        content: "Led Crypt0nest.io product delivery and established engineering standards, code review paths, and CI/CD guardrails for a 44-person mixed BS/MS intern and contributor cohort."
         url: "https://tekly.dev/"
 
       - title: "Key Contributor & Developer - Coding United Club @ SNHU"
@@ -241,17 +243,17 @@ params:
     enable: true
     # title: "My Projects"
     items:
-      # --- Founder / AI Product Project ---
+      # --- Personal AI Product Project ---
       - title: "Ellide - AI Study Materials for Educators"
-        content: "Founded and launched Ellide.co, an educator-first AI workflow that turns syllabi, slides, readings, handouts, and OCR-heavy PDFs into AI-ready teaching documents. The product is built around grounded context, optional teaching guidance, and cleaner Markdown/JSON outputs for ChatGPT, Claude, Gemini, internal tools, and RAG-style workflows."
+        content: "Built Ellide as a personal AI study-material project after seeing students struggle to turn scattered course documents into useful learning context. It transforms syllabi, slides, readings, handouts, and OCR-heavy PDFs into structured Markdown/JSON for AI chats, internal tools, and RAG-style workflows."
         image: "/images/projects/ellide-homepage.webp"
         imageDark: "/images/projects/ellide-homepage-dark.webp"
         featured:
           name: "Visit Ellide"
           link: "https://ellide.co/"
         badges:
-          - "Founder"
-          - "AI Product"
+          - "Personal Project"
+          - "AI Tooling"
           - "LLMOps"
           - "OCR"
           - "Document AI"

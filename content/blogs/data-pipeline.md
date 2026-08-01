@@ -3,6 +3,7 @@ title: "Enterprise Crypto Data Pipeline Architecture"
 date: 2026-01-30
 image: "/images/projects/diagram_simple_transparent.webp"
 description: "A deep dive into the survivorship-bias-free ETL architecture built for Tekly Studio x Crypt0nest."
+summary: "A deep dive into the survivorship-bias-free ETL architecture built for Tekly Studio x Crypt0nest."
 tags: ["Data Engineering", "GCP", "Python", "Architecture"]
 ---
 {{< button link="https://jswindell.dev" >}}

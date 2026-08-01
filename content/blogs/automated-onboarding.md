@@ -2,7 +2,8 @@
 title: "Automated Onboarding Pipeline & Headless LMS"
 date: 2026-02-01
 image: "/images/projects/automated-onboarding-base-final.webp"
-description: ""
+description: "A production-grade onboarding pipeline connecting Airtable, DocuSign, Google Workspace, and an automatically generated headless LMS."
+summary: "A production-grade onboarding pipeline connecting Airtable, DocuSign, Google Workspace, and an automatically generated headless LMS."
 tags: ["Python", "GitHub Actions", "AI", "Automation", "Airtable API", "DocuSign API", "JWT", "OpenAI API"]
 ---
 {{< button link="https://jswindell.dev" >}}

@@ -4,6 +4,10 @@ languageCode: "en-us"
 title: "John Swindell - Portfolio"
 theme: hugo-profile
 
+# Minify generated markup in every build, including Cloudflare Pages.
+minify:
+  minifyOutput: true
+
 # --- Output Formats ---
 outputs:
   home:

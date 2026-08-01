@@ -1,0 +1,27 @@
+{{ $posts := first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blogs") }}
+{{ if $posts }}
+<section id="writing" class="py-5">
+  <div class="container">
+    <h3 class="text-center">Latest Writing</h3>
+    <div class="row justify-content-center pt-4">
+      {{ range $posts }}
+      <div class="col-lg-4 col-md-6 my-3">
+        <article class="card h-100 writing-card">
+          <div class="card-body bg-transparent p-4">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format (":date_medium" | default "Jan 2, 2006") }}</time>
+            <a href="{{ .RelPermalink }}" class="writing-card-title primary-font">{{ .Title }}</a>
+            <p class="secondary-font">{{ .Summary }}</p>
+          </div>
+          <div class="writing-card-footer">
+            <a href="{{ .RelPermalink }}" class="btn btn-outline-info btn-sm">Read</a>
+          </div>
+        </article>
+      </div>
+      {{ end }}
+    </div>
+    <div class="text-center pt-3">
+      <a href="{{ "blogs/" | relURL }}" class="btn">View All Writing</a>
+    </div>
+  </div>
+</section>
+{{ end }}

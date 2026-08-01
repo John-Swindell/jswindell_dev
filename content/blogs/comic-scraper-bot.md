@@ -7,22 +7,6 @@ summary: "A small async Python bot I built to help a friend catch limited comic 
 source: "https://github.com/John-Swindell/comic-scraper-discord-bot"
 tags: ["Python", "Asyncio", "Docker", "Developer Experience", "Discord API"]
 ---
-{{< button link="https://jswindell.dev" >}}
-Back to Home Page
-{{< /button >}}
-
-{{< button link="https://github.com/John-Swindell/comic-scraper-discord-bot" >}}
-View Source Code
-{{< /button >}}
-
-{{< button link="https://jswindell.dev/blogs" >}}
-View More Blogs
-{{< /button >}}
-
-<br>
-<br>
-<br>
-
 ### Why I made it
 
 This started as a birthday gift for a close friend. He is a UX engineer and a serious comic collector, but he kept missing limited variant covers that would appear without much warning and sell out in minutes.

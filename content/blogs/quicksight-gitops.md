@@ -5,18 +5,6 @@ description: "How I added backups, pull requests, validation, and safer publishi
 summary: "How I added backups, pull requests, validation, and safer publishing around Amazon QuickSight."
 tags: ["Platform Engineering", "Amazon QuickSight", "GitOps", "GitHub Actions", "Data Visualization"]
 ---
-{{< button link="https://jswindell.dev" >}}
-Back to Home Page
-{{< /button >}}
-
-{{< button link="https://jswindell.dev/blogs" >}}
-View More Blogs
-{{< /button >}}
-
-<br>
-<br>
-<br>
-
 ### Why the UI was not enough
 
 Our team builds dashboards in Amazon QuickSight. It is useful for moving quickly, but important production work can live almost entirely in a web interface. A small change to a dataset or calculated field can affect several analyses, and undo does not give you the same safety as a known working commit.

@@ -5,18 +5,6 @@ description: "How I am building a simple AWS path for turning useful internal pr
 summary: "How I am building a simple AWS path for turning useful internal prototypes into applications that other people can actually use."
 tags: ["Platform Engineering", "AWS", "Terraform", "GitHub Actions", "Internal Developer Platforms"]
 ---
-{{< button link="https://jswindell.dev" >}}
-Back to Home Page
-{{< /button >}}
-
-{{< button link="https://jswindell.dev/blogs" >}}
-View More Blogs
-{{< /button >}}
-
-<br>
-<br>
-<br>
-
 ### The gap after the prototype
 
 Coding agents have made it much easier for people to build small tools for their own work. Someone can explain a slow process and end up with a surprisingly good single-page application in an afternoon.

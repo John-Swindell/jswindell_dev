@@ -7,22 +7,6 @@ summary: "How I connected Airtable, DocuSign, Google Workspace, and generated tr
 source: "https://github.com/John-Swindell/automated-onboarding-pipeline"
 tags: ["Python", "GitHub Actions", "AI", "Automation", "Airtable API", "DocuSign API", "JWT", "OpenAI API"]
 ---
-{{< button link="https://jswindell.dev" >}}
-Back to Home Page
-{{< /button >}}
-
-{{< button link="https://github.com/John-Swindell/automated-onboarding-pipeline" >}}
-View Source Code
-{{< /button >}}
-
-{{< button link="https://jswindell.dev/blogs" >}}
-View More Blogs
-{{< /button >}}
-
-<br>
-<br>
-<br>
-
 ### Why I built it
 
 Onboarding more than 30 technical interns meant repeating the same work across Airtable, DocuSign, Google Docs, and Drive. Offers had to be assembled and sent, signatures had to be tracked, accounts needed the right access, and each person needed training material for their track.

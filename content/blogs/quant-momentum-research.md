@@ -7,22 +7,6 @@ summary: "A backtesting project that helped me reject a profitable-looking model
 source: "https://github.com/John-Swindell/machine-learning-research-model"
 tags: ["Machine Learning", "Python", "Quantitative Finance", "CatBoost", "Risk Analysis"]
 ---
-{{< button link="https://jswindell.dev" >}}
-Back to Home Page
-{{< /button >}}
-
-{{< button link="https://github.com/John-Swindell/machine-learning-research-model" >}}
-View Source Code
-{{< /button >}}
-
-{{< button link="https://jswindell.dev/blogs" >}}
-View More Blogs
-{{< /button >}}
-
-<br>
-<br>
-<br>
-
 ### What I wanted to test
 
 This project started with a simple question. Could a momentum model beat holding Bitcoin without taking on much more risk?

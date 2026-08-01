@@ -7,22 +7,6 @@ summary: "A Dockerized GCP pipeline for collecting cleaner historical crypto dat
 source: "https://github.com/John-Swindell/data-engineering-etl-pipeline"
 tags: ["Data Engineering", "GCP", "Python", "Architecture"]
 ---
-{{< button link="https://jswindell.dev" >}}
-Back to Home Page
-{{< /button >}}
-
-{{< button link="https://github.com/John-Swindell/data-engineering-etl-pipeline" >}}
-View Source Code
-{{< /button >}}
-
-{{< button link="https://jswindell.dev/blogs" >}}
-View More Blogs
-{{< /button >}}
-
-<br>
-<br>
-<br>
-
 ### The data problem
 
 I built this pipeline for research that needed a believable picture of the crypto market at different points in time. Using only the assets that exist today makes old backtests look better than they should because failed projects disappear from the sample.

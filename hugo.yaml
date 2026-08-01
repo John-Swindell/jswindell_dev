@@ -339,9 +339,9 @@ params:
             url: "https://github.com/John-Swindell/comic-scraper-discord-bot"
             tooltip: "View Source Code"
 
-      - title: "Computer Science Student Career Skill Explorer"
-        content: "Built a lightweight AI-assisted career exploration tool for CS students and Coding United members. Users complete self-assessment checklists, then a Cloudflare Worker calls the Gemini API to summarize strengths, gaps, and career-path alignments."
-        image: "/images/skills-checklist-site-animation.webp"
+      - title: "AI Career Skill Explorer"
+        content: "Built a lightweight single-page tool for Coding United members. A Cloudflare Worker keeps the Gemini API call off the client while the page turns checked skills into a readable career-path summary."
+        image: "/images/skills-checklist-site.webp"
         featured:
           name: View Skill Explorer
           link: "https://coding-united-skill.pages.dev/"
@@ -349,12 +349,9 @@ params:
           - "HTML"
           - "CSS"
           - "JavaScript"
-          - "UI/UX Design"
-          - "Educational Tool"
-          - "Web Development"
-          - "AI / LLM"
-          - "Gemini API"
           - "Cloudflare Workers"
+          - "Gemini API"
+          - "Educational Tool"
         # commented out because source code is private right now.
 #        links:
 #          - icon: fab fa-github
